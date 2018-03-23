@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 /**
  * Created by weicm on 2018/3/23.
+ * <p>Desp: 简单工厂模式</p>
  */
-public class Driver {
+public class SimpleFactoryDriver {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
