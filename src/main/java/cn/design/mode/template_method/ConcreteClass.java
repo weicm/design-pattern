@@ -1,4 +1,4 @@
-package cn.design.mode.templat_method;
+package cn.design.mode.template_method;
 
 /**
  * Created by weicm on 2018/5/25.
