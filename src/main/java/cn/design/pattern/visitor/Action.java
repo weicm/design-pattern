@@ -12,6 +12,7 @@ public abstract class Action {
         this.desc = desc;
     }
 
+    //这里可以使用方法重载，即方法名一样，参数不一样，利用Java语言的多态实现第二级分派
     public abstract void getManConclusion(Man man);
     public abstract void getWomanConclusion(Woman woman);
 }

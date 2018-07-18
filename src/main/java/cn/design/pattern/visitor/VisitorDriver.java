@@ -10,6 +10,7 @@ public class VisitorDriver {
         ds.add(new Man());
         ds.add(new Woman());
 
+        //第一级分派有客户端决定，即分派的具体Visior
         //成功
         ds.accept(new Success());
         //失败
