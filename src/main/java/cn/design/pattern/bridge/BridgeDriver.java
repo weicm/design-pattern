@@ -9,7 +9,7 @@ package cn.design.pattern.bridge;
 public class BridgeDriver {
     public static void main(String[] args) {
         BrandPhone phone = new MPhone();
-        Game soft = new Game();
+        PhoneSoft soft = new Game();
         phone.setSoft(soft);
         phone.run();
     }
