@@ -39,7 +39,7 @@ public class Calculator {
 
     /**
      * <p>Created by weicm on 2018/7/14 11:44</p>
-     * <p>Desp: 将表达式便以为逆波兰表达式</p>
+     * <p>Desp: 将表达式编译为逆波兰表达式</p>
      */
     private void compile() {
         for (int i = 0; i < statement.length; i++) {
@@ -82,7 +82,7 @@ public class Calculator {
                 //左括号直接入操作符栈
                 if (be.isLeft())
                     os.push(be);
-                else {//右括号，则依次弹出操作符栈的元素，知道遇到左括号
+                else {//右括号，则依次弹出操作符栈的元素，直到遇到左括号
                     while (!(os.peek() instanceof Curves)) {
                         ips.push(os.pop());
                     }
@@ -110,10 +110,10 @@ public class Calculator {
             os.push(ips.pop());
         }
 
-        //依次去除你不懒表达式元素
+        //依次取出逆波兰表达式元素
         while (!os.isEmpty()) {
             Expr e = os.pop();
-            //遇到操作符，则从语法树栈去除左右元素，并设置给操作符
+            //遇到操作符，则从语法树栈取出左右元素，并设置给操作符
             if (e instanceof NTExpr) {
                 NTExpr nte = (NTExpr) e;
                 nte.setR(gts.pop());
